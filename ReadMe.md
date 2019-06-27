@@ -15,12 +15,10 @@ Use the latest ES6/7 patterns to write the code. The code will be transformed to
 
 ## Usage
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+```JS
+Write code in src/ folder
+npm run build
+node dist/{path_to_file}
 ```
 
 ## Contributing
