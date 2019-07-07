@@ -10,10 +10,10 @@ class Queue {
 
   print() {
     if (this.front === -1) {
-      console.log('EMPTY QUEUE !!');
+      console.log("EMPTY QUEUE !!");
       return;
     }
-    for (let i=this.front; i<=this.rear; i++) {
+    for (let i = this.front; i <= this.rear; i++) {
       console.log(this.data[i]);
     }
   }
@@ -27,7 +27,7 @@ class Queue {
       this.front++;
       this.rear++;
     } else {
-      this.rear++
+      this.rear++;
     }
     this.data[this.rear] = value;
   }
@@ -35,7 +35,7 @@ class Queue {
   dequeue() {
     let value;
     if (this.front === -1 || this.rear === -1) {
-      console.log('EMPTY QUEUE');
+      console.log("EMPTY QUEUE");
       return;
     } else if (this.front === this.rear) {
       value = this.data.shift();
@@ -70,16 +70,16 @@ class Stack {
 
   pop() {
     if (this.top === -1) {
-      console.log('EMPTY STACK');
+      console.log("EMPTY STACK");
       return;
     }
 
     // Finding tbe value and pushing it to the retriever array.
-    for(let i=0; i<this.top; i++) {
+    for (let i = 0; i < this.top; i++) {
       this.q2.enqueue(this.q1.dequeue());
     }
     const value = this.q1.dequeue();
-    while(!this.q2.isEmpty()) {
+    while (!this.q2.isEmpty()) {
       this.q1.enqueue(this.q2.dequeue());
     }
     this.top--;
@@ -92,8 +92,3 @@ const stack = new Stack();
 console.log(stack.printState());
 console.log(stack.pop());
 console.log(stack.printState());
-
-
-
-
-
